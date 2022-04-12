@@ -1,0 +1,83 @@
+/* @font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"),
+       url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+} */
+
+.left1 {
+  background-color: #1F1F3D;
+  width: 200px;
+  height: 800px;
+}
+h1 {
+  color: #EAEAF4;
+  margin: 15px;
+
+}
+
+h2 {
+  color: #EAEAF4;
+  font-size: 15px;
+  margin: 15px;
+}
+
+.show-starred-idea-button {
+  background-color: #A9AAD2;
+  margin: 15px;
+  color: white;
+  border:none;
+  height: 40px;
+  width: 170px;
+}
+
+.left2 {
+  background-color: #1F1F3D;
+  width: 200px;
+  height: 50px;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+.fill-out {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height:400px;
+  width:1000px;
+  background-color: #A9AAD2;
+}
+
+#title-id {
+  height: 35px;
+  width:350px;
+  border-color: #1F1F3D
+}
+
+#body-id {
+  height: 70px;
+  width:350px;
+  border-color:#1F1F3D
+}
+
+#search-for-ideas {
+  height: 35px;
+  width: 350px;
+  border-color:#1F1F3D
+}
+
+.save {
+  height: 35px;
+  width: 350px;
+  background-color: #1F1F3D;
+  color: white;
+}
