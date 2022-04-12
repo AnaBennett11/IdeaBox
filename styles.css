@@ -12,8 +12,8 @@
 h1 {
   color: #EAEAF4;
   margin: 15px;
-
 }
+
 
 h2 {
   color: #EAEAF4;
@@ -73,6 +73,12 @@ form {
   height: 35px;
   width: 350px;
   border-color:#1F1F3D
+}
+
+.search {
+  background-color: #1F1F3D;
+  width: 35px;
+  height: 35px;
 }
 
 .save {
