@@ -19,23 +19,45 @@
        <hr style="width:100%", size="1", color="#A9AAD2">
       </section>
       </section>
+      <section class="right-box">
       <section class="fill-out">
         <form>
-          <label for="title">Title</label>
+          <label class="left" for="title">Title</label>
           <input type="text" id="title-id">
-          <label for="body">Body</label>
+          <label class="left" for="body">Body</label>
           <input type="text" id="body-id"><br>
           <button class="save" type="button">Save</button><br>
-          <button class="search" type="button"><img src="assets/search.svg" alt="magnifying-glass">
-          </button>
-          <label for="search"></label>
-          <input type="text" id="search-for-ideas" placeholder="Search Ideas">
+            <section class="search-input"><button class="search" type="button"><img src="assets/search.svg" alt="magnifying-glass">
+              </button>
+              <label for="search"></label>
+              <input type="text" id="search-for-ideas" placeholder="Search Ideas">
+            </section>
         </form>
       </section>
-      <section class="ideabox2">
+        <section class="ideabox2">
+              <container class="wrapper">
+                <box class="box"></box>
+              </container>
           <div class="ideas"></div>
         </section>
+      </section>
       </main>
     </body>
     <script type="text/javascript" src="main.js"></script>
     </html>
+
+<!-- do we need wrapper around boxes? because of ideabox2 -->
+
+    <!--
+    <img src="assets/comment.svg" alt="circle-plus">
+    <img src="assets/delete-active.svg" alt="color-x">
+    <img src="assets/delete.svg" alt="blank-x">
+    <img src="assets/downvote-active.svg" alt="color-down-arrow">
+    <img src="assets/downvote.svg" alt="blank-down-arrow">
+    <img src="assets/menu-close.svg" alt="blank-x">
+    <img src="assets/menu.svg" alt="three-rows">
+    <img src="assets/star-active.svg" alt="color-star">
+    <img src="assets/star.svg" alt="blank-star">
+    <img src="assets/upvote-active.svg" alt="color-up-arrow">
+    <img src="assets/upvote.svg" alt="blank-up-arrow">
+    -->

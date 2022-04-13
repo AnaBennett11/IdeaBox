@@ -4,16 +4,29 @@
        url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
 } */
 
+/* * {
+  border: 1px solid red;
+} */
+
 .left1 {
   background-color: #1F1F3D;
   width: 200px;
   height: 800px;
 }
+
 h1 {
   color: #EAEAF4;
   margin: 15px;
 }
 
+.left {
+  display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	align-content: stretch;
+}
 
 h2 {
   color: #EAEAF4;
@@ -39,11 +52,19 @@ h2 {
 main {
   display: flex;
   flex-direction: row;
+  width: 100%;
 }
 
 .fill-out {
   display: flex;
   flex-direction: column;
+  height:400px;
+  width:100%;
+  background-color: #EAEAF4;
+  justify-content: center;
+  align-items: center;
+  background-color: #A9AAD2;
+
 }
 
 form {
@@ -51,34 +72,33 @@ form {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  height:400px;
-  width:1000px;
-  background-color: #A9AAD2;
+  align-items: left;
+  height: 400px;
+  width: 350px;
 }
 
 #title-id {
   height: 35px;
   width:350px;
-  border-color: #1F1F3D
+  border-color: #1F1F3D;
 }
 
 #body-id {
   height: 70px;
   width:350px;
-  border-color:#1F1F3D
+  border-color:#1F1F3D;
 }
 
 #search-for-ideas {
   height: 35px;
-  width: 350px;
-  border-color:#1F1F3D
+  width: 310px;
+  border-color:#1F1F3D;
 }
 
 .search {
   background-color: #1F1F3D;
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
 }
 
 .save {
@@ -86,4 +106,54 @@ form {
   width: 350px;
   background-color: #1F1F3D;
   color: white;
+}
+
+.search-input {
+  display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: stretch;
+  border-color:#1F1F3D;
+}
+
+.ideabox2 {
+  background-color: white;
+  width: auto;
+  height: 500px;
+  border: solid 1px black;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	align-content: center;
+}
+
+.box {
+  display: flex;
+  border: solid 1px black;
+  background-color: #ADD8E6;
+  height: 100px;
+  width: 100px;
+  justify-content: space-evenly;
+}
+
+
+.right-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+}
+
+.wrapper {
+  display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	align-content: flex-start;
+  width: 100%;
 }
