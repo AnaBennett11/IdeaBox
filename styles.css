@@ -11,7 +11,7 @@
 .left1 {
   background-color: #1F1F3D;
   width: 200px;
-  height: 800px;
+  height: auto;
 }
 
 h1 {
@@ -53,6 +53,7 @@ main {
   display: flex;
   flex-direction: row;
   width: 100%;
+  margin: none;
 }
 
 .fill-out {
@@ -132,12 +133,16 @@ form {
 }
 
 .box {
-  display: flex;
   border: solid 1px black;
   background-color: #ADD8E6;
-  height: 100px;
-  width: 100px;
-  justify-content: space-evenly;
+  height: 180px;
+  width: 160px;
+  display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: stretch;
+	align-content: stretch;
 }
 
 
@@ -156,4 +161,44 @@ form {
 	align-items: center;
 	align-content: flex-start;
   width: 100%;
+}
+
+.card-img {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#top-icon {
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: stretch;
+}
+
+.top-bar {
+  height: 40px;
+  width: 160px;
+  background-color: #1F1F3D;
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: stretch;
+}
+
+.middle-bar {
+  height: 100px;
+  width: 160px;
+  background-color: #FFFFFF;
+}
+
+.bottom-bar {
+  height: 40px;
+  width: 160px;
+  background-color: #5356A4;
 }
