@@ -1,6 +1,3 @@
-//insert html here
-
-
 class Idea() {
   constructor(id, title, body, star) {
     this.id = id;
@@ -27,10 +24,10 @@ if (this.star === false) {
 
 var ideaBoxDetails = [
 {
-  id: //unique Identifier - numeric
-  title: ""
-  body: ""
-  star: //true or false
+  id: Date.now()
+  title: "Idea title";
+  body: "Idea body. Don't ever play yourself. Every chance I get, I water the plants, Lion! Cloth talk.";
+  star: false;
 }
 ]
 
