@@ -13,5 +13,4 @@ if (this.star === false) {
   console.log("click", this.star)
 }
 }
-
 }
