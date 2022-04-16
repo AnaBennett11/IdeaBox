@@ -228,3 +228,7 @@ p {
   cursor: default;
 
 }
+
+.hidden {
+  display: none;
+}

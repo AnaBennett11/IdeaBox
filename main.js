@@ -4,6 +4,7 @@ var saveButton = document.querySelector(".save");
 var titleInput = document.querySelector("#title-id");
 var bodyInput = document.querySelector("#body-id");
 var wrapper = document.querySelector(".wrapper");
+var deleteButton = document.querySelector("delete");
 // elementList = parentNode.querySelectorAll(selectors)
 
 var ideas = [];
@@ -15,11 +16,13 @@ saveButton.addEventListener("click", function(event) {
   pushCard();
   displayCard();
   clearInputs();
-
-
 })
+
 titleInput.addEventListener("keyup", keyupFunction)
 bodyInput.addEventListener("keyup", keyupFunction)
+
+wrapper.addEventListener("click", removeIdea)
+
 
 //functions go here
 
@@ -39,7 +42,7 @@ function displayCard () {
       <section class="top-bar">
         <button class="top-card-button" "inactive-star"><img class="card-img" id="top-icon" src="assets/star-active.svg" alt="color-star">
         </button>
-        <button class="top-card-button"><img class="card-img" id="top-icon" src="assets/delete.svg" alt="blank-x">
+        <button name="delete" class="top-card-button"><img class="card-img" id="${ideas[i].id}" src="assets/delete.svg" alt="blank-x">
         </button>
       </section>
       <section class="middle-bar">
@@ -69,26 +72,31 @@ function keyupFunction(event) {
   }
 }
 
+function removeIdea(event) {
+  console.log(event.target.id);
+   id = parseInt(event.target.id);
+   ideas = ideas.filter(ideas => ideas.id !== id);
+   displayCard();
+}
 
 
 
 
-//As a user,
-
-// When I click “Save”,
-// If I entered information in both the “Title” and “Body” input fields,
-// I should see a new Idea instance with the provided title and body appear in the ideas array
-// I should see a new idea card with the provided title and body appear on the DOM
-//the new info from the array needs to display on the card, once its in the array
-// you want to display it in the application so the user can see it, innerHTML,
-//we're gonna inject the html with the info that is in that array, create for loop inside of this array
-//
-
-
+// When we want to delete an idea, click the delete button
+// and it removes the idea from the ideas array
 
 // As a user,
 //
-// When I click “Save”,
-// If I entered information in both the “Title” and “Body” input fields,
-// I should see the “Title” and “Body” input fields clear out
-//figure out how to resent my input fields to nothing
+// When I click the “Delete” button on an idea card,
+// The card instance should be permanently removed from the ideas array
+// The card should be permanently removed from my view
+// As a user,
+//
+// When I click the “Star” button on an idea card,
+// The card instance’s star property should be updated in the ideas array
+// When the button was an outline of a star (not favorited), the button should now be a filled in star (favorited)
+// and vice versa (for unfavoriting)
+// As a user,
+//
+// When I delete or favorite any card,
+// I should not see the page reload

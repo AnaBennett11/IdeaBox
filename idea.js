@@ -5,12 +5,11 @@ class Idea {
     this.body = body;
     this.star = false;
   }
-
-updateIdea(){
-  console.log("initial value", this.star)
+updateIdea() {
+  // console.log("initial value", this.star)
 if (this.star === false) {
   this.star = true
-  console.log("click", this.star)
-}
-}
+  // console.log("click", this.star)
+    }
+  }
 }
