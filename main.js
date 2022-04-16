@@ -10,12 +10,16 @@ var ideas = [];
 
 //eventlisteners here
 
-saveButton.addEventListener("click", function() {
+saveButton.addEventListener("click", function(event) {
+  event.preventDefault();
   pushCard();
   displayCard();
   clearInputs();
 
+
 })
+titleInput.addEventListener("keyup", keyupFunction)
+bodyInput.addEventListener("keyup", keyupFunction)
 
 //functions go here
 
@@ -52,8 +56,22 @@ function displayCard () {
 }
 
 function clearInputs() {
-  
+titleInput.value = null;
+bodyInput.value = null;
+keyupFunction();
 }
+
+function keyupFunction(event) {
+  if (titleInput.value && bodyInput.value){
+    saveButton.disabled = false;
+  }else{
+    saveButton.disabled = true;
+  }
+}
+
+
+
+
 
 //As a user,
 
