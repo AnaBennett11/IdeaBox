@@ -22,10 +22,44 @@ saveButton.addEventListener("click", function(event) {
 titleInput.addEventListener("keyup", keyupFunction)
 bodyInput.addEventListener("keyup", keyupFunction)
 
-wrapper.addEventListener("click", function(event) {
-  removeIdea(event);
-  showStar(event);
-})
+ wrapper.addEventListener("click", function(event) {
+   // console.log(event.target.id);
+   // console.log(event.target.nodeName);
+   // console.log(event.target.classList.contains('button-favorite'));
+   // console.log(event.target.classList.contains('button-delete'));
+   // //removeIdea(event);
+   //showStar(event);
+   // if(nodeName === img && the class === buttonFavorite) {
+   //   console.log("this is a favorite click");
+   // } else if (nodeName === img && the class === buttonDelete){
+   //   console.log("remove idea");
+   // }
+     if (event.target.nodeName.toLowerCase() == "img" && event.target.classList.contains("button-favorite")) {
+       // console.log("favorite click");
+        toggleFavorite(event);
+     } else if (event.target.nodeName.toLowerCase() == "img" && event.target.classList.contains("button-delete")) {
+        removeIdea(event); // console.log("delete click");
+     }
+ })
+
+
+function toggleFavorite(event) {
+//update the database with the users favorite preferences for selected card
+//redisplay the cards
+  for (var i = 0; i < ideas.length; i++) {
+    if (`star${ideas[i].id}` === event.target.id) {
+      console.log("the current favorite value is " + ideas[i].star);
+      if (ideas[i].star === true) {
+        ideas[i].star = false;
+      }else{
+        ideas[i].star = true;
+      }
+     }
+
+    }
+displayCard();
+
+}
 
 
 //functions go here
@@ -37,15 +71,28 @@ console.log(ideas);
   }
 
 function displayCard () {
+
+  var imageSRC = "";
+
+
+
   wrapper.innerHTML = "";
   //i'm gonna create a for loop inside of this array to pull the title and body
   for(var i = 0; i < ideas.length; i++) {
+
+    //  determine value of imageSRC.
+    if (ideas[i].star === true) {
+      imageSRC = "star-active.svg";
+    }else{
+      imageSRC = "star.svg";
+    }
+
     wrapper.innerHTML += `
     <box class="box">
       <section class="top-bar">
-        <button class="top-card-button" "inactive-star"><img class="card-img" id="star${ideas[i].id}" src="assets/star-active.svg" alt="color-star">
+        <button class="top-card-button"><img class="card-img button-favorite" id="star${ideas[i].id}" src="assets/${imageSRC}" alt="color-star">
         </button>
-        <button name="delete" class="top-card-button"><img class="card-img" id="${ideas[i].id}" src="assets/delete.svg" alt="blank-x">
+        <button name="delete" class="top-card-button"><img class="card-img button-delete" id="${ideas[i].id}" src="assets/delete.svg" alt="blank-x">
         </button>
       </section>
       <section class="middle-bar">
@@ -60,6 +107,9 @@ function displayCard () {
     </box>`;
   }
 }
+
+
+
 
 function clearInputs() {
 titleInput.value = null;
@@ -89,7 +139,7 @@ function removeIdea(event) {
 }
 
 function showStar(event) {
-  id = event.target.id
+  id = event.target.id;
   console.log(id)
   for (var i = 0; i < ideas.length; i++) {
     if (`star${ideas[i].id}` === id) {
@@ -98,29 +148,10 @@ function showStar(event) {
   }
 }
 }
-
-
-
-
-
-
-
-
-// When we want to delete an idea, click the delete button
-// and it removes the idea from the ideas array
-
-// As a user,
-//
-// When I click the “Delete” button on an idea card,
-// The card instance should be permanently removed from the ideas array
-// The card should be permanently removed from my view
 // As a user,
 //
 // When I click the “Star” button on an idea card,
 // The card instance’s star property should be updated in the ideas array
 // When the button was an outline of a star (not favorited), the button should now be a filled in star (favorited)
 // and vice versa (for unfavoriting)
-// As a user,
 //
-// When I delete or favorite any card,
-// I should not see the page reload
