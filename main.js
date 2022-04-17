@@ -5,6 +5,7 @@ var titleInput = document.querySelector("#title-id");
 var bodyInput = document.querySelector("#body-id");
 var wrapper = document.querySelector(".wrapper");
 var deleteButton = document.querySelector("delete");
+
 // elementList = parentNode.querySelectorAll(selectors)
 
 var ideas = [];
@@ -21,7 +22,10 @@ saveButton.addEventListener("click", function(event) {
 titleInput.addEventListener("keyup", keyupFunction)
 bodyInput.addEventListener("keyup", keyupFunction)
 
-wrapper.addEventListener("click", removeIdea)
+wrapper.addEventListener("click", function(event) {
+  removeIdea(event);
+  showStar(event);
+})
 
 
 //functions go here
@@ -36,11 +40,10 @@ function displayCard () {
   wrapper.innerHTML = "";
   //i'm gonna create a for loop inside of this array to pull the title and body
   for(var i = 0; i < ideas.length; i++) {
-    console.log(ideas[i].title);
     wrapper.innerHTML += `
     <box class="box">
       <section class="top-bar">
-        <button class="top-card-button" "inactive-star"><img class="card-img" id="top-icon" src="assets/star-active.svg" alt="color-star">
+        <button class="top-card-button" "inactive-star"><img class="card-img" id="star${ideas[i].id}" src="assets/star-active.svg" alt="color-star">
         </button>
         <button name="delete" class="top-card-button"><img class="card-img" id="${ideas[i].id}" src="assets/delete.svg" alt="blank-x">
         </button>
@@ -73,11 +76,32 @@ function keyupFunction(event) {
 }
 
 function removeIdea(event) {
-  console.log(event.target.id);
-   id = parseInt(event.target.id);
-   ideas = ideas.filter(ideas => ideas.id !== id);
+   id = (event.target.id);
+   // ideas = ideas.filter(ideas => ideas.id !== id);
+   for (var i = 0; i < ideas.length; i++) {
+     if (`${ideas[i].id}` === id) {
+     ideas.splice(i, 1)
+   }
+ }
+   // above line equals for each index in ideas, check if that id equals
+   // event id.
    displayCard();
 }
+
+function showStar(event) {
+  id = event.target.id
+  console.log(id)
+  for (var i = 0; i < ideas.length; i++) {
+    if (`star${ideas[i].id}` === id) {
+      document.getElementById(id).src ="assets/star.svg";
+
+  }
+}
+}
+
+
+
+
 
 
 
