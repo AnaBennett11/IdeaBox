@@ -17,7 +17,7 @@
 
 
 ## Deployed Page
-  -
+  - Visit our published IdeaBox page [here](https://anabennett11.github.io/IdeaBox/) 
 
 
 ## Possible Future Extensions
