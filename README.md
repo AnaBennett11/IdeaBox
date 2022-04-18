@@ -1,21 +1,8 @@
 # IdeaBox
 <img width="127" alt="idea-box-logo" src="https://user-images.githubusercontent.com/80136642/121270129-f6117480-c875-11eb-9dfa-89e1beaaa762.png">
 
-## Table of Contents
-  - [Introduction](#introduction)
-  - [Technologies](#technologies)
-  - [Features](#features)
-  - [Illustrations](#illustrations)
-  - [Deployed Page](#deployed-page)
-  - [Possible Future Extensions](#possible-future-extensions)
-  - [Set Up](#set-up)
-  - [Organizational Resources](#organizational-resources)
-  - [Sources](#sources)
-  - [Contributors](#contributors)
-  - [Project Specs](#project-specs)
-
 ## Introduction
-
+  - Visit IdeaBox to make virtual cards of your ideas with a title and body. Revisit your favorite Ideas or delete them forever.
 
 
 ## Technologies
@@ -24,19 +11,17 @@
   - CSS
 
 ## Features
-
-
-
-## Illustrations
-
+  - Make an unlimited amount of cards that hold your personal ideas.
+  - Favorite your own idea cards.
+  - Delete your own idea cards.
 
 
 ## Deployed Page
-
+  -
 
 
 ## Possible Future Extensions
-
+  - Save cards to photos on local computer.
 
 
 ## Set Up
@@ -45,16 +30,14 @@
 2. Clone the repo to your local machine
 3. View the project in the browser by running open index.html in your terminal
 
-## Organizational Resources
-
 
 ## Sources
   - [MDN](http://developer.mozilla.org/en-US/)
   - [W3Schools](https://www.w3schools.com/)
 
 ## Contributors
-  - [Ana Bennett](https://www.linkedin.com/in/ana-bennett-500202236/)
-  - [Lauren Black]()
+  - [Ana Bennett](https://www.linkedin.com/in/ana-bennett/)
+  - [Lauren Black](https://www.linkedin.com/in/lauren-black-487947215/)
   - [Cleveland Ticoalu](https://www.linkedin.com/in/cleveland-ticoalu-70a357184/)
 
 
