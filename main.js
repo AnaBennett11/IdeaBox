@@ -87,23 +87,3 @@ function keyupFunction(event) {
     saveButton.disabled = true;
   }
 }
-
-function removeIdea(event) {
-   id = (event.target.id);
-   for (var i = 0; i < ideas.length; i++) {
-     if (`${ideas[i].id}` === id) {
-     ideas.splice(i, 1)
-    }
-  }
-  displayCard();
-}
-
-function showStar(event) {
-  id = event.target.id;
-  console.log(id)
-  for (var i = 0; i < ideas.length; i++) {
-    if (`star${ideas[i].id}` === id) {
-      document.getElementById(id).src ="assets/star.svg";
-    }
-  }
-}

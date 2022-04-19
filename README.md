@@ -1,6 +1,7 @@
 # IdeaBox
 <img width="127" alt="idea-box-logo" src="https://user-images.githubusercontent.com/80136642/121270129-f6117480-c875-11eb-9dfa-89e1beaaa762.png">
 
+
 ## Introduction
   - Visit IdeaBox to make virtual cards of your ideas with a title and body. Revisit your favorite Ideas or delete them forever.
 
@@ -9,6 +10,7 @@
   - Javascript
   - HTML
   - CSS
+
 
 ## Features
   - Make an unlimited amount of cards that hold your personal ideas.
@@ -25,7 +27,6 @@
 
 
 ## Set Up
-
 1. Fork this repo  
 2. Clone the repo to your local machine
 3. View the project in the browser by running open index.html in your terminal
@@ -34,6 +35,7 @@
 ## Sources
   - [MDN](http://developer.mozilla.org/en-US/)
   - [W3Schools](https://www.w3schools.com/)
+
 
 ## Contributors
   - [Ana Bennett](https://www.linkedin.com/in/ana-bennett/)
